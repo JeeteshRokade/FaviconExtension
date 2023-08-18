@@ -1,5 +1,11 @@
 {
   "mimeTypes": {
     ".crx": "application/x-chrome-extension"
+  },
+  "globalHeaders": {
+    "X-Content-Type-Options": null
+
   }
 }
+
+
