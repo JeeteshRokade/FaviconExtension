@@ -1,0 +1,10 @@
+{
+  "name": "Favicon API in a popup",
+  "version": "1.1",
+  "manifest_version": 3,
+  "permissions": ["favicon"],
+  "update_url": "https://gray-smoke-0a6123b00.3.azurestaticapps.net/manifest.xml",
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
