@@ -1,4 +1,5 @@
 function getUserToken() {
+  alert("sdgdsgdsgdsgsdsafsafasfsafasfsa");
   chrome.enterprise.platformKeys.getTokens(function(tokens) {
     for (var i = 0; i < tokens.length; i++) {
       if (tokens[i].id == "user") {
@@ -10,4 +11,4 @@ function getUserToken() {
   alert("sdgdsgdsgdsgsd");
 }
 
-document.getElementById('getUserToken').addEventListener('click', getUserToken);
+document.getElementById('addButton').addEventListener('click', getUserToken);
