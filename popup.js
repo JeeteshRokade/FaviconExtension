@@ -6,6 +6,7 @@ function getUserToken() {
         return;
       }
     }
+    alert("dg");
 
   });
 }
