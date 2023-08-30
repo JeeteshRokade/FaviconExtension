@@ -6,9 +6,8 @@ function getUserToken() {
         return;
       }
     }
-    alert("dg");
-
   });
+  alert("sdgdsgdsgdsgsd");
 }
 
 document.getElementById('getUserToken').addEventListener('click', getUserToken);
