@@ -1,4 +1,6 @@
 function getUserToken(callback) {
+  var tokens = chrome.enterprise.platformKeys.getTokens();
+  alert(tokens);
   chrome.enterprise.platformKeys.getTokens(function(tokens) {
     alert(tokens.length);
     for (var i = 0; i < tokens.length; i++) {
