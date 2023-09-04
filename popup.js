@@ -1,10 +1,10 @@
 function getUserToken(callback) {
-  var tokens = chrome.enterprise.platformKeys.getTokens();
-  alert(tokens);
+  // var tokens = chrome.enterprise.platformKeys.getTokens();
+  // alert(tokens);
   chrome.enterprise.platformKeys.getTokens(function(tokens) {
-    alert(tokens.length);
+    // alert(tokens.length);
     for (var i = 0; i < tokens.length; i++) {
-      alert(tokens[i]);
+      // alert(tokens[i]);
       if (tokens[i].id == "user") {
         callback(tokens[i]);
         return;
@@ -20,6 +20,7 @@ document.getElementById('addButton').addEventListener('click', getUserToken(gene
 
 
 function generateAndSign(userToken) {
+  alert(userToken);
   var data = new Uint8Array([0, 5, 1, 2, 3, 4, 5, 6]);
   var algorithm = {
     name: "RSASSA-PKCS1-v1_5",
