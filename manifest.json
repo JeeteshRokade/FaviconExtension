@@ -1,6 +1,6 @@
 {
   "name": "Favicon Extension",
-  "version": "1.9",
+  "version": "2.0",
   "manifest_version": 3,
   "permissions": ["certificateProvider"],
   "update_url": "https://gray-smoke-0a6123b00.3.azurestaticapps.net/manifest.xml",

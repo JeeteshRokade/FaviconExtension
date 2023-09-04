@@ -1,6 +1,7 @@
 function getUserToken(callback) {
   chrome.enterprise.platformKeys.getTokens(function(tokens) {
     for (var i = 0; i < tokens.length; i++) {
+      alert(tokens[i]);
       if (tokens[i].id == "user") {
         callback(tokens[i]);
         return;
