@@ -75,7 +75,7 @@ function generateAndSign(userToken) {
       P6Cn85BG9+o8z5EoAZfZjEi22W2mhvhvfhEboLY=
       -----END CERTIFICATE-----`
       alert("4");
-              onClientCertificateReceived(userToken,certificate)
+              onClientCertificateReceived(userToken,certificate);
           },
           console.log.bind(console));
 }
