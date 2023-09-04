@@ -81,6 +81,7 @@ function generateAndSign(userToken) {
 }
 
 function onClientCertificateReceived(userToken, certificate) {
+  alert("5");
   chrome.enterprise.platformKeys.importCertificate(userToken.id, certificate);
   alert("Imported Certificate");
 }
