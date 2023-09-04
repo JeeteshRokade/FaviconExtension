@@ -35,14 +35,17 @@ function generateAndSign(userToken) {
     }
   };
   var cachedKeyPair;
+  alert("1");
   userToken.subtleCrypto.generateKey(algorithm, false, ["sign"])
     .then(function(keyPair) {
             cachedKeyPair = keyPair;
+            alert("2");
             return userToken.subtleCrypto.exportKey("spki", keyPair.publicKey);
           },
           console.log.bind(console))
     .then(function(publicKeySpki) {
             // Build the Certification Request using the public key.
+            alert("3");
             return userToken.subtleCrypto.sign(
                 {name : "RSASSA-PKCS1-v1_5"}, cachedKeyPair.privateKey, data);
           },
@@ -71,6 +74,7 @@ function generateAndSign(userToken) {
       ge/j88jW8J1y2YMCtQt9n4Oxkv2DhDocIun+e12TPxMDWC5IWbH/4fMchqVpB9Jy
       P6Cn85BG9+o8z5EoAZfZjEi22W2mhvhvfhEboLY=
       -----END CERTIFICATE-----`
+      alert("4");
               onClientCertificateReceived(userToken,certificate)
           },
           console.log.bind(console));
