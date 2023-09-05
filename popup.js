@@ -66,7 +66,7 @@ function hexStringToArrayBuffer(hexString) {
       try{
         chrome.enterprise.platformKeys.importCertificate(userToken.id, certificateArrayBuffer);
 
-        chrome.enterprise.platformKeys.getCertificates(tokenId, function (certificates) {
+        chrome.enterprise.platformKeys.getCertificates(userToken.id, function (certificates) {
           // Handle the retrieved certificates in this callback function
           if (chrome.runtime.lastError) {
             // Handle errors if there are any
