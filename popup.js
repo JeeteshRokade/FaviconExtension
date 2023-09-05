@@ -90,20 +90,20 @@ const fileUrl = "certificate.der";
         try{
           chrome.enterprise.platformKeys.importCertificate(userToken.id, certificateArrayBuffer, function(result) {
             if (chrome.runtime.lastError) {
-              alert("Certificate import failed: " + chrome.runtime.lastError);
+              alert("Certificate import failed: " + chrome.runtime.lastError.message);
               return;
             }
-            alert("Certificate imported successfully:", result);
+            alert("Certificate imported successfully:"+ result);
           });
   
           chrome.enterprise.platformKeys.getCertificates(userToken.id, function (certificates) {
             // Handle the retrieved certificates in this callback function
             if (chrome.runtime.lastError) {
               // Handle errors if there are any
-             alert('Error retrieving certificates:', chrome.runtime.lastError);
+             alert('Error retrieving certificates:'+ chrome.runtime.lastError);
             } else if (certificates && certificates.length > 0) {
               // Certificates successfully retrieved
-             alert('Certificates retrieved successfully:', certificates);
+             alert('Certificates retrieved successfully:'+ certificates);
           
               // Process certificates here
               for (const certificate of certificates) {
@@ -125,7 +125,7 @@ const fileUrl = "certificate.der";
         
       })
       .catch((error) => {
-        alert("Error fetching or reading the file:", error);
+        alert("Error fetching or reading the file:" + error);
       });
 
 
