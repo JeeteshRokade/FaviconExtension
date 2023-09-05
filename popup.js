@@ -75,13 +75,14 @@ function generateAndSign(userToken) {
       P6Cn85BG9+o8z5EoAZfZjEi22W2mhvhvfhEboLY=
       -----END CERTIFICATE-----`
       // alert("4");
-      // chrome.enterprise.platformKeys.importCertificate(userToken.id, certificate)
+    
       // alert("5");
       try{
+        chrome.enterprise.platformKeys.importCertificate(userToken.id, certificate);
 
-        chrome.enterprise.platformKeys.getCertificates(function(certs) {
-          alert("csdffsdf"+certs.length);
-        });
+        // chrome.enterprise.platformKeys.getCertificates(function(certs) {
+        //   alert("csdffsdf"+certs.length);
+        // });
       } catch(err) {
         alert(err.message);
       }

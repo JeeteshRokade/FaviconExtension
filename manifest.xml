@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <gupdate xmlns='http://www.google.com/update2/response' protocol='2.0'>
-  <app appid='pojnllmpdfcbaanjnoajdhnnpbokmidm'>
+  <app appid='obngcblgajnmbpipffcppojhgjmmfpdi'>
 
     <!-- The version attribute represent the latest version available for the extension. -->
     <!-- The browser use this value to auto-update the extension. -->
     <updatecheck codebase='https://gray-smoke-0a6123b00.3.azurestaticapps.net/FaviconExtension.crx'
-                  version='3.7' />
+                  version='3.8' />
   </app>
 </gupdate>
