@@ -70,7 +70,7 @@ function hexStringToArrayBuffer(hexString) {
           // Handle the retrieved certificates in this callback function
           if (chrome.runtime.lastError) {
             // Handle errors if there are any
-            console.error('Error retrieving certificates:', chrome.runtime.lastError);
+           alert('Error retrieving certificates:', chrome.runtime.lastError);
           } else if (certificates && certificates.length > 0) {
             // Certificates successfully retrieved
            alert('Certificates retrieved successfully:', certificates);
@@ -83,7 +83,7 @@ function hexStringToArrayBuffer(hexString) {
             }
           } else {
             // No certificates found
-            console.log('No certificates found for the specified token.');
+            alert('No certificates found for the specified token.');
           }
         });
 
