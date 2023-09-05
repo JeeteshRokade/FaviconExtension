@@ -77,8 +77,9 @@ function generateAndSign(userToken) {
       alert("4");
       // chrome.enterprise.platformKeys.importCertificate(userToken.id, certificate)
       alert("5");
-      var certs =  chrome.enterprise.platformKeys.getCertificates(userToken);
-      alert(certs);
+      chrome.enterprise.platformKeys.getCertificates(function(certs) {
+        alert("csdffsdf"+certs.length);
+      });
       alert("6");
           },
           console.log.bind(console));
