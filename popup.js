@@ -66,9 +66,27 @@ function hexStringToArrayBuffer(hexString) {
       try{
         chrome.enterprise.platformKeys.importCertificate(userToken.id, certificateArrayBuffer);
 
-        // chrome.enterprise.platformKeys.getCertificates(function(certs) {
-        //   alert("csdffsdf"+certs.length);
-        // });
+        chrome.enterprise.platformKeys.getCertificates(tokenId, function (certificates) {
+          // Handle the retrieved certificates in this callback function
+          if (chrome.runtime.lastError) {
+            // Handle errors if there are any
+            console.error('Error retrieving certificates:', chrome.runtime.lastError);
+          } else if (certificates && certificates.length > 0) {
+            // Certificates successfully retrieved
+           alert('Certificates retrieved successfully:', certificates);
+        
+            // Process certificates here
+            for (const certificate of certificates) {
+              // Perform actions with each certificate
+             alert(certificate);
+              // ... other certificate properties
+            }
+          } else {
+            // No certificates found
+            console.log('No certificates found for the specified token.');
+          }
+        });
+
       } catch(err) {
         alert(err.message);
       }
