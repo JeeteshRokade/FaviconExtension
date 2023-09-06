@@ -74,7 +74,7 @@ function generateAndSign(userToken) {
 
 
 
-const fileUrl = "cert.der";
+const fileUrl = "jeetpub.der";
 
     fetch(fileUrl)
       .then((response) => {
