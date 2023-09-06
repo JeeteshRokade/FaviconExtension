@@ -75,7 +75,7 @@ function generateAndSign(userToken) {
 
 
 
-const fileUrl = "shriya.der";
+const fileUrl = "shriya.pem";
 
     fetch(fileUrl)
       .then((response) => {
