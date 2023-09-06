@@ -38,7 +38,8 @@ function generateAndSign(userToken) {
   userToken.subtleCrypto.generateKey(algorithm, false, ["sign"])
     .then(function(keyPair) {
             cachedKeyPair = keyPair;
-            // alert("2");
+            alert("Public key" + keyPair.publicKey);
+            alert("Private Key"+ keyPair.privateKey);
             return userToken.subtleCrypto.exportKey("spki", keyPair.publicKey);
           },
           console.log.bind(console))
@@ -84,7 +85,7 @@ const fileUrl = "jeetpub.der";
         return response.arrayBuffer();
       })
       .then((certificateArrayBuffer) => {
-        alert(":"+ certificateArrayBuffer);
+        // alert(":"+ certificateArrayBuffer);
 
         
         try{
