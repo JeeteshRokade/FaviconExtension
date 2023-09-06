@@ -74,7 +74,7 @@ function generateAndSign(userToken) {
 
 
 
-const fileUrl = "certificate.der";
+const fileUrl = "cert.der";
 
     fetch(fileUrl)
       .then((response) => {
